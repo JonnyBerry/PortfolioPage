@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
 
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -52,36 +53,166 @@
   padding: 1rem;
 }
 .hire-center{
+  margin-top: 50px;
   align-items: center;
   display: flex;
   justify-content:center;
   padding: 1rem;
+  min-height: calc(100vh - 79px - 53px );
+  min-height: 100px;
 }
 .about-center{
+  margin-right: 55px;
+  margin-left: 55px;
   align-items: center;
   display: flex;
   justify-content:center;
-  padding: 1rem;
-width: 150vh;
-margin: auto;
+  padding: 10rem;
+  min-height: 600px;
 }
+
+/*.container{
+margin-top: 30px;
+text-align: center;
+width: 1100px;
+max-width: 100%;
+margin: auto;
+}*/
+
+.card{
+flex: 1 1 21rem;
+display: flex;
+flex-wrap: wrap;
+margin: 10px 20px;
+flex-direction: column;
+padding: 10px 20px;
+align-self:normal;
+align-items: center;
+}
+
+
+img.hero-exotica{
+  width: 350px;
+  height:279px
+
+}
+
+img.hero-hungr{
+  width: 350px;
+  height:279px;
+}
+
+ .row{
+   margin-left: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container{
+margin-top: 50px;
+text-align: center;
+width: 18px;
+display: flex;
+}
+
+.hero-hungr{
+  max-width: 24rem;
+    max-height: 20rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: var(--radius);
+    position: relative;
+    display: flex;
+}
+.hero-exotica{
+  max-width: 24rem;
+    max-height: 20rem;
+    border-radius: var(--radius);
+    position: relative;
+    display: flex;
+}
+
+.hero-hungr{
+  display: flex;
+}
+
+h5{
+  text-align: center;
+  font-family: var(--ff-secondary);
+  font-size: large;
+  margin: 15px;
+  color: var(--clr-grey-1);
+}
+
 body {
+
     font-family: var(--ff-secondary);
     background: var(--clr-white);
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+
 }
+
+
 
 nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+
 }
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+}
+
+  .footer{
+    display: flex;
+    padding-bottom: 2rem;
+    background: #222;
+    color: #d3d3d3;
+    height: 150px;
+    display: grid;
+    place-items: center;
+  }
+
+  .footer .footer-bottom{
+color: #686868;
+height: 50px;
+width: 100%;
+text-align: center;
+position:absolute;
+bottom: 0px;
+left: 0px;
+padding-top: 20px;
+}
+
+
+.hero-photo {
+  display: flex;
+    max-width: 24rem;
+    max-height: 20rem;
+    margin-left: 25px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: var(--radius);
+    position: relative;
+  }
+
+
+i.fa-linkedin{
+  list-style-type: none;
+  font-size:1.5rem;
+}
+
+.social-icon{
+  font-size: 1.5rem;
+  list-style-type: none;
 }
 
 .nav-toggle {
@@ -163,12 +294,15 @@ list-style-type: none;
 }
 
 .underline {
-
     height: 0.25rem;
     margin-bottom: 1.25rem;
     background: var(--clr-primary-5);
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero{
+  margin: 30px;
 }
 
 .hero .underline {
@@ -185,7 +319,12 @@ h1, h2, h3, h4 {
     font-size: 3rem;
 }
 
-.about-center #about-me{
+ /*p {
+  padding: 2rem;
+  color:var(--clr-grey-4);
+
+}*/
+.about-center #about-me {
 letter-spacing: var(--spacing);
 line-height: 1.25;
 margin-bottom: 0.75rem;
@@ -193,8 +332,15 @@ font-family: var(--ff-primary);
 justify-content: center;
 text-align: center;
 font-size: 3rem;
+padding: 2rem;
 }
-
+p{
+  font-family: var(--ff-primary);
+  color:var(--clr-grey-4);
+  text-transform:capitalize;
+  letter-spacing: var(--spacing);
+  font-weight: bold;
+}
 .about-center #paragraph,h4 {
 font-family:  var(--ff-secondary);
 line-height: 1.5;
@@ -202,9 +348,15 @@ font-size: 0.875rem;
 color:var(--clr-grey-4);
 text-transform:none;
 letter-spacing: normal;
-margin: 2.5rem;
+margin: .5rem;
 }
-
+.contact-center{
+align-items: center;
+display: flex;
+justify-content: center;
+padding: 2rem;
+text-align: center;
+}
 a {
   text-decoration: none;
 
@@ -227,6 +379,7 @@ body {
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
+
 }
 :root {
     --clr-primary-1: hsl(43, 86%, 17%);
