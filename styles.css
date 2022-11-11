@@ -43,7 +43,11 @@
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-
+/* START OF NAV*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
 .nav-center{
   max-width: 1170px;
   margin:0 auto;
@@ -52,6 +56,48 @@
   justify-content: space-between;
   padding: 1rem;
 }
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+}
+
+.nav-header {
+  padding: 0;
+}
+.nav-toggle {
+  display: none;
+}
+
+nav ul li {
+list-style-type: none;
+}
+/* END OF NAV*/
+
+
+html,body {
+    width: 100%;
+    font-family: var(--ff-secondary);
+    background: hsl(45, 90%, 88%);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    padding:0;
+    margin:0;
+}
+
 .hire-center{
   margin-top: 50px;
   align-items: center;
@@ -60,7 +106,9 @@
   padding: 1rem;
   min-height: calc(100vh - 79px - 53px );
   min-height: 100px;
+  flex-wrap: wrap;
 }
+
 .about-center{
   margin-right: 55px;
   margin-left: 55px;
@@ -103,17 +151,13 @@ img.hero-hungr{
 }
 
  .row{
-   margin-left: 150px;
+  text-align: center;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.container{
-margin-top: 50px;
-text-align: center;
-width: 18px;
-display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 
 .hero-hungr{
@@ -125,6 +169,7 @@ display: flex;
     position: relative;
     display: flex;
 }
+
 .hero-exotica{
   max-width: 24rem;
     max-height: 20rem;
@@ -145,31 +190,12 @@ h5{
   color: var(--clr-grey-1);
 }
 
-body {
 
-    font-family: var(--ff-secondary);
-    background: var(--clr-white);
-    color: var(--clr-grey-1);
-    line-height: 1.5;
-    font-size: 0.875rem;
-    display: flex;
-    flex-direction: column;
-
+#wrapper {
+  overflow: hidden;
 }
 
 
-
-nav {
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
-
-}
-.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
 
   .footer{
     display: flex;
@@ -215,18 +241,6 @@ i.fa-linkedin{
   list-style-type: none;
 }
 
-.nav-toggle {
-  font-size: 1.5rem;
-  color: var(--clr-primary-5);
-  background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
-  cursor: pointer;
-}
-.nav-toggle:hover {
-  color: var(--clr-primary-1);
-  transform: rotate(90deg);
-}
 .logo {
   height: 40px;
 }
@@ -243,22 +257,7 @@ i.fa-linkedin{
   display: flex;
 }
 
-nav ul li {
-list-style-type: none;
-}
 
-.links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding-left: 1.5rem;
-}
-
-.nav-header {
-    padding: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
   .links {
     height: auto;
     display: flex;
@@ -354,7 +353,7 @@ margin: .5rem;
 align-items: center;
 display: flex;
 justify-content: center;
-padding: 2rem;
+padding: 15rem;
 text-align: center;
 }
 a {
@@ -373,14 +372,7 @@ a:-webkit-any-link {
     text-decoration: underline;
 }
 
-body {
-    font-family: var(--ff-secondary);
-    background: hsl(45, 90%, 88%);
-    color: var(--clr-grey-1);
-    line-height: 1.5;
-    font-size: 0.875rem;
 
-}
 :root {
     --clr-primary-1: hsl(43, 86%, 17%);
     --clr-primary-2: hsl(43, 77%, 27%);
@@ -412,6 +404,8 @@ body {
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --max-width: 1170px;
 }
+
+
 *, ::after, ::before {
     margin: 0;
     padding: 0;
@@ -421,4 +415,41 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 1170px) {
+  nav .nav-center {
+    max-width: 1170px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav .nav-center {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 768px;
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav ul li {
+    margin-left: 0;
+  }
+  nav ul li a {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width:480px){
+  .about-center #about-me {
+    margin: .5rem;
+  }
 }
