@@ -291,7 +291,15 @@ i.fa-linkedin{
     box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
     border-radius: var(--radius);
 }
-
+.social-icon,li{
+margin:0 10px;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+.footer-content{
+display: flex;
+}
 .underline {
     height: 0.25rem;
     margin-bottom: 1.25rem;
